@@ -6,8 +6,19 @@
     font-style: normal;
 }
 
+html {
+    background-color: rgb(230, 212, 115);
+}
+
 img {
     width: 100%;
+    border-radius: 5px;
+    height: auto;
+    object-fit: cover;
+}
+
+.two-column .image {
+    padding-top: 10%;
 }
 
 .hero-image {
@@ -38,6 +49,53 @@ img {
 }
 
 .info {
-    font-size: 1.25em;
+    font-size: 1.1vw;
     font-weight: normal;
+}
+
+.three-column {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    margin: auto;
+    width: 80%; 
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.three-column-title {
+    font-size: 3vw;
+    text-align: center;
+}
+
+.three-column-info {
+    font-size: 1.1vw;
+    padding: 20px;
+    text-align: center;
+}
+
+.card {
+    background-color: rgb(216, 144, 97);
+    border-radius: 5px;
+}
+
+.card-text {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .three-column {
+        grid-template-columns: 1fr; 
+        gap: 30px;
+    width: 90%;
+    }
+    
+    .card img {
+        height: auto;
+    }
+    
+    .three-column-info {
+        padding: 10px;
+        font-size: 1.5em;
+    }
 }
